@@ -1,0 +1,39 @@
+name: Deploy Angular Frontend to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # nur deployen, wenn auf main gepusht wird
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Repository auschecken
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js installieren
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # 3. Dependencies installieren
+      - name: Install dependencies
+        working-directory: ./Frontend
+        run: npm install
+
+      # 4. Angular Build (mit korrektem base-href)
+      - name: Build Angular project
+        working-directory: ./Frontend
+        run: npm run build -- --output-path=dist --base-href /NarroWeb/
+
+      # 5. Deploy zu GitHub Pages (Branch gh-pages)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Frontend/dist

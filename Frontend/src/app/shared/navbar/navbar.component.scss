@@ -1,0 +1,12 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid rgba(255,255,255,0.7);
+}
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

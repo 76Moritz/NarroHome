@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { homeRoute, impressumRoute, notFoundRoute, privacyPolicyRoute } from '../../routes.constants';
+import { eventRoute, homeRoute, impressumRoute, notFoundRoute, privacyPolicyRoute } from '../../routes.constants';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,7 @@ export class NavbarComponent {
     home:homeRoute,
     impressum:impressumRoute,
     privacyPolicy:privacyPolicyRoute,
-    notFound:notFoundRoute
+    notFound:notFoundRoute,
+    event:eventRoute
   }
 }

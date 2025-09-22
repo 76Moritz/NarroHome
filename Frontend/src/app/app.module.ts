@@ -13,7 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { PrivacyPolicyComponent } from './pages/privacyPolicy/privacyPolicy.component';
+import { EventComponent } from './pages/event/event.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { PrivacyPolicyComponent } from './pages/privacyPolicy/privacyPolicy.comp
     NavbarComponent,
     HomeComponent,
     ImpressumComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { PrivacyPolicyComponent } from './pages/privacyPolicy/privacyPolicy.comp
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

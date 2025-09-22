@@ -12,13 +12,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import { PrivacyPolicyComponent } from './pages/privacyPolicy/privacyPolicy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { MatCardModule } from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,12 @@
 <mat-toolbar color="primary">
   <span class="spacer"></span>
-  <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+  <button mat-button routerLink="/{{this.Routes.home}}" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     Home
   </button>
-  <button mat-button routerLink="/impressum" routerLinkActive="active">
+  <button mat-button routerLink="/{{this.Routes.impressum}}" routerLinkActive="active">
     Impressum
+  </button>
+  <button mat-button routerLink="/{{this.Routes.privacyPolicy}}" routerLinkActive="active">
+    Datenschutz
   </button>
 </mat-toolbar>

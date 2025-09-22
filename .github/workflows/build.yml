@@ -7,6 +7,10 @@ on:
     branches:
       - main            # auf welchem Branch? -> ggf. "master" oder "develop" anpassen
 
+  pull_request:
+      branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest

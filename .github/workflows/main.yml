@@ -3,7 +3,7 @@ name: Deploy Angular Frontend to GitHub Pages
 on:
   push:
     branches:
-      - main   # nur deployen, wenn auf main gepusht wird
+      - main
 
 jobs:
   deploy:
@@ -25,16 +25,17 @@ jobs:
       # 3. Dependencies installieren
       - name: Install dependencies
         working-directory: ./Frontend
-        run: npm install
+        run: npm ci
 
-      # 4. Angular Build (mit korrektem base-href)
+      # 4. Angular Build mit korrektem base-href
       - name: Build Angular project
         working-directory: ./Frontend
-        run: npm run build -- --output-path=dist --base-href /NarroWeb/
+        run: npm run build -- --output-path=dist/frontend --base-href /NarroHome/
 
-      # 5. Deploy zu GitHub Pages (Branch gh-pages)
+      # 5. Deploy zu GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./Frontend/dist/frontend/browser

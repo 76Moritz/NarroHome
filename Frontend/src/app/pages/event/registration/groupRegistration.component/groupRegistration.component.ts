@@ -33,7 +33,7 @@ export class GroupRegistrationComponent {
       ],
     ],
     personAmount: [null, [Validators.required, Validators.min(1)]],
-    programmType: [''], // optional
+    programmType: ['none'], // optional
     travel: ['', Validators.required],
   });
 

@@ -5,6 +5,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { sendSimpleMessage } from '../../../../mailing/mailing';
+import { Email_Subjects } from '../../../../mailing/subject.constants';
+import { Textbuilder } from '../../../../mailing/text.constants';
 
 @Component({
   selector: 'app-group-registration',
@@ -42,6 +45,9 @@ export class GroupRegistrationComponent {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
+      const data=this.form.value;
+      const response=sendSimpleMessage(Email_Subjects.incomingGroupRegistration,Textbuilder.buildText(data.groupName!,data.contactPerson!,data.email!,data.phone!,data.personAmount!,data.programmType!,data.travel!));
+      console.log(response);
     } else {
       this.form.markAllAsTouched();
     }

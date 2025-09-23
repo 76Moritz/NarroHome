@@ -1,0 +1,101 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Vereinsname</mat-label>
+          <input matInput formControlName="groupName" required>
+          <mat-error *ngIf="form.get('groupName')?.hasError('required')">
+            Pflichtfeld
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Name des Ansprechpartners</mat-label>
+          <input matInput formControlName="contactPerson" required>
+          <mat-error *ngIf="form.get('contactPerson')?.hasError('required')">
+            Pflichtfeld
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Emailadresse</mat-label>
+          <input matInput formControlName="email" required>
+          <mat-error *ngIf="form.get('email')?.hasError('required')">
+            Pflichtfeld
+          </mat-error>
+          <mat-error *ngIf="form.get('email')?.hasError('email')">
+            Ungültige E-Mail-Adresse
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Telefonnummer</mat-label>
+          <input matInput formControlName="phone" required>
+          <mat-error *ngIf="form.get('phone')?.hasError('required')">
+            Pflichtfeld
+          </mat-error>
+          <mat-error *ngIf="form.get('phone')?.hasError('pattern')">
+            Bitte gültige Telefonnummer eingeben
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Personenanzahl</mat-label>
+          <input matInput type="number" formControlName="personAmount" required>
+          <mat-error *ngIf="form.get('personAmount')?.hasError('required')">
+            Pflichtfeld
+          </mat-error>
+          <mat-error *ngIf="form.get('personAmount')?.hasError('min')">
+            Mindestens 1 Person
+          </mat-error>
+        </mat-form-field>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-radio-group formControlName="programmType" aria-label="Programtype">
+          <mat-label>Programmtyp</mat-label><br>
+          <mat-radio-button value="music">Musikauftritt</mat-radio-button>
+          <mat-radio-button value="dance">Tanzauftritt</mat-radio-button>
+        </mat-radio-group>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <mat-radio-group formControlName="travel" aria-label="travelType" required>
+          <mat-label>Anreise</mat-label><br>
+          <mat-radio-button value="bus">Bus</mat-radio-button>
+          <mat-radio-button value="car">Auto</mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="form.get('travel')?.hasError('required')">
+          Pflichtfeld
+        </mat-error>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button mat-raised-button color="primary" type="submit">Absenden</button>
+      </td>
+    </tr>
+  </table>
+</form>

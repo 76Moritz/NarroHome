@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qZQc8CnRjtol7B49Q7cAoriJU7kdAwedo16k5+wNRCM=",
+  "Source": "MailgunProxy",
+  "BasePath": "_content/MailgunProxy",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

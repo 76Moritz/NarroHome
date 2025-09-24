@@ -41,12 +41,22 @@ export class GroupRegistrationComponent {
   });
 
   constructor(private fb: FormBuilder) {}
-
+  programmType={
+    none:'keinen Auftritt',
+    music:'einen Musikauftritt',
+    dance:'einen Tanzauftritt'
+  }
+  travelOptions={
+    bus:'Bus',
+    car:'Auto',
+  }
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
       const data=this.form.value;
-      const response=sendSimpleMessage(Email_Subjects.incomingGroupRegistration,Textbuilder.buildText(data.groupName!,data.contactPerson!,data.email!,data.phone!,data.personAmount!,data.programmType!,data.travel!));
+      const response=sendSimpleMessage(Email_Subjects.incomingGroupRegistration,
+        Textbuilder.buildText(data.groupName!,data.contactPerson!,data.email!,data.phone!,data.personAmount!,
+          this.programmType[data.programmType! as keyof typeof this.programmType],this.travelOptions[data.travel! as keyof typeof this.travelOptions]));
       console.log(response);
     } else {
       this.form.markAllAsTouched();

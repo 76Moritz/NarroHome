@@ -1,4 +1,4 @@
-name: Build Backend
+name: Build .net Backend
 
 on:
   push:             # bei jedem Push (egal auf welchen Branch)
@@ -16,7 +16,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.0'   # anpassen an deine Version
+          dotnet-version: '8.0'   # anpassen an deine Version
 
       - name: Restore dependencies
         run: dotnet restore ./Backend/Backend.sln

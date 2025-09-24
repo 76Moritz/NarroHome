@@ -1,0 +1,25 @@
+name: Build Backend
+
+on:
+  push:             # bei jedem Push (egal auf welchen Branch)
+  pull_request:
+    branches: [ "main" ]   # bei Pull Requests nach main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.0'   # anpassen an deine Version
+
+      - name: Restore dependencies
+        run: dotnet restore ./Backend/Backend.sln
+
+      - name: Build
+        run: dotnet build Backend/Backend.sln --configuration Release --no-restore

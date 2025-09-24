@@ -12,6 +12,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}   # <<< Hier Secret einfügen
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

@@ -1,6 +1,0 @@
-@MailgunProxy_HostAddress = http://localhost:5020
-
-GET {{MailgunProxy_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

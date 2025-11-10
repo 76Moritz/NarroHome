@@ -1,0 +1,29 @@
+<mat-card class="carousel" [style.height]="height">
+<div class="slides">
+<img *ngFor="let img of images; let i = index"
+[src]="img"
+[class.active]="i === current"
+class="slide"
+[attr.aria-hidden]="i === current ? 'false' : 'true'"
+alt="Foto {{i + 1}}" />
+</div>
+
+
+<button mat-icon-button class="nav left" aria-label="Zurück" (click)="prev()">
+<mat-icon>chevron_left</mat-icon>
+</button>
+<button mat-icon-button class="nav right" aria-label="Weiter" (click)="next()">
+<mat-icon>chevron_right</mat-icon>
+</button>
+
+
+<div class="indicators">
+<button mat-button *ngFor="let img of images; let i = index"
+class="dot"
+[class.active]="i === current"
+(click)="goTo(i)">
+Gehe zu Bild {{i + 1}}
+<span class="visually-hidden">Bild {{i + 1}}</span>
+</button>
+</div>
+</mat-card>

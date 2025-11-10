@@ -1,0 +1,14 @@
+mat-list-item {
+  display: flex;
+  align-items: center; // Vertikale Ausrichtung von Icon und Text
+}
+
+mat-icon {
+  font-size: 20px; // Größere Icons, um sie sichtbar und proportional zu machen
+  margin-right: 8px; // Abstand zwischen Icon und Text
+  vertical-align: middle; // Vertikale Ausrichtung sicherstellen
+}
+
+mat-list-item span {
+  line-height: 1.5; // Sicherstellen, dass der Text gut ausgerichtet ist
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PdqWav9uHi4=",
+  "dgSpecHash": "6KHzIcuMBtM=",
   "success": true,
   "projectFilePath": "C:\\Projects\\git\\NarroHome\\BE\\NarroWebService\\NarroWebService\\NarroWebService.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\motiz\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\motiz\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\motiz\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "C:\\Users\\motiz\\.nuget\\packages\\scalar.aspnetcore\\2.10.3\\scalar.aspnetcore.2.10.3.nupkg.sha512",
     "C:\\Users\\motiz\\.nuget\\packages\\swashbuckle.aspnetcore\\10.0.0\\swashbuckle.aspnetcore.10.0.0.nupkg.sha512",
     "C:\\Users\\motiz\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.0.0\\swashbuckle.aspnetcore.swagger.10.0.0.nupkg.sha512",
     "C:\\Users\\motiz\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.0.0\\swashbuckle.aspnetcore.swaggergen.10.0.0.nupkg.sha512",

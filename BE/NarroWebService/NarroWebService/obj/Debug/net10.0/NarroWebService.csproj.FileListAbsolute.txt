@@ -122,3 +122,4 @@ C:\Projects\git\NarroHome\BE\NarroWebService\NarroWebService\obj\Debug\net10.0\r
 C:\Projects\git\NarroHome\BE\NarroWebService\NarroWebService\obj\Debug\net10.0\NarroWebService.pdb
 C:\Projects\git\NarroHome\BE\NarroWebService\NarroWebService\obj\Debug\net10.0\NarroWebService.genruntimeconfig.cache
 C:\Projects\git\NarroHome\BE\NarroWebService\NarroWebService\obj\Debug\net10.0\ref\NarroWebService.dll
+C:\Projects\git\NarroHome\BE\NarroWebService\NarroWebService\bin\Debug\net10.0\Scalar.AspNetCore.dll

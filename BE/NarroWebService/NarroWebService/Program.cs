@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using NarroWebService.Data;
 using NarroWebService.Repositories;
-using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,12 +21,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    
-    app.MapScalarApiReference(options =>
-    {
-        options.Title = "Narro WebService API";
-        options.Theme = ScalarTheme.Solarized;
-    });
+
 }
 
 app.UseHttpsRedirection();

@@ -2,7 +2,7 @@
 
 public class Photo
 {
-    public Guid Id { get;}
+    public Guid Id { get; set; }
     public string Path
     {
         get;
@@ -13,10 +13,5 @@ public class Photo
     {
         get;
         set;
-    }
-
-    public Photo()
-    {
-        Id = Guid.NewGuid();
     }
 }

@@ -41,7 +41,7 @@ namespace RestApiBlueprint.Controllers
         {
             var photo = new Photo
             {
-                Id=dto.Id,
+                Id=Guid.NewGuid(),
                 Path = dto.Path,
                 FallbackText = dto.FallbackText
             };

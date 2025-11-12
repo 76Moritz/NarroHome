@@ -3,9 +3,12 @@
 public class Photo
 {
     public Guid Id { get; set; }
-    public string Path
+    public string Path { get; set; }
+    public string FallbackText { get; set; }
+
+    public  Photo()
     {
-        get;
-        set;
+        Id = Guid.NewGuid();
     }
+
 }

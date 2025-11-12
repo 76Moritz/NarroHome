@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NarroWebService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f432566d8f6cff1bfc85100bc6b526b7ace54a67")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcc4603ee178c508661aadb9244c7da7d1cd8827")]
 [assembly: System.Reflection.AssemblyProductAttribute("NarroWebService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NarroWebService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,5 +8,11 @@
             get;
             set;
         }
+
+        public string FallbackText
+        {
+            get;
+            set;
+        }
     }
 }

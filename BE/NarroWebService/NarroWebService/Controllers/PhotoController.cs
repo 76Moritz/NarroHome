@@ -43,7 +43,7 @@ namespace RestApiBlueprint.Controllers
             {
                 Id=dto.Id,
                 Path = dto.Path,
-                FallbackText = dto.FallbackText,
+                FallbackText = dto.FallbackText
             };
 
             await _repository.AddAsync(photo);
@@ -57,6 +57,7 @@ namespace RestApiBlueprint.Controllers
             if (photo == null) return NotFound();
 
             photo.Path = dto.Path;
+            photo.FallbackText = dto.FallbackText;
 
             await _repository.UpdateAsync(photo);
             return NoContent();

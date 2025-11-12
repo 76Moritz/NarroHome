@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G4vKpQxkYkJn/H6bhFcZKI7DNvUfJcXmuFGgCNTbAuY=",
+  "Source": "NarroWebService",
+  "BasePath": "_content/NarroWebService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

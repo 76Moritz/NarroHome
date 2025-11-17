@@ -8,4 +8,10 @@ public class Photo
         get;
         set;
     }
+
+    public string FallbackText
+    {
+        get;
+        set;
+    }
 }
